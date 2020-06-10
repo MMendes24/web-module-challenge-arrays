@@ -154,13 +154,17 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-function filterByWord(/*code here*/){
-
-    /*code here*/
-
+function filterByWord(arr, string, newarr){
+    newarr = []
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i].includes(string)){
+            newarr.push(arr[i]);
+        }
+    }
+    return newarr;
 }
 
-
+//remember you MUST use a string for newarr
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/ 
 
@@ -179,7 +183,6 @@ function getAverageWordLength(/*code here*/){
     /*code here*/
 
 }
-
 
 /* STRETCH 2: Baskin Robins now offers new flavors, seasonal flavors, and even regional flavors. Write a function that will randomly select a total of 31 flavors from originalFlavors, currentFlavors, seasonalFlavors, and regionalFlavors.
 
